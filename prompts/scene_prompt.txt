@@ -1,0 +1,25 @@
+### CONTEXT OF PREVIOUS SCENE (for smooth transition)
+{prev_visual}
+
+### TRANSITION DIRECTION
+{transition_hint}
+
+### CURRENT SCENE DESCRIPTION
+{main_visual}
+
+---
+
+Generate an 8-second cinematic news-style video that transitions naturally from the previous scene into the current one.
+
+Requirements:
+- Keep the same main character: a professional Vietnamese female news anchor, early 30s, elegant and confident.
+- Outfit: red traditional áo dài with subtle golden patterns.
+- Environment: modern TV newsroom, warm soft lighting, neutral background, realistic reflection on studio floor.
+- Camera: 35mm lens, eye-level angle, slightly dynamic framing (subtle dolly or zoom).
+- Lighting: key + rim setup, balanced highlights, no harsh shadows.
+- Motion: smooth, realistic, continuous from previous scene context.
+- Style: cinematic realism, 4K resolution, realistic facial motion and lip sync.
+- Duration: exactly 8 seconds.
+
+Do not display any on-screen text or captions in the video.
+Focus entirely on visuals, lighting, and natural movement.
