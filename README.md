@@ -1,4 +1,3 @@
-```markdown
 # 🎬 Google AI Video Pipeline
 
 Pipeline này tự động sinh **video tin tức hoặc phóng sự** chỉ bằng các mô hình AI của **Google** (Gemini, Veo, Imagen, TTS).  
@@ -202,5 +201,3 @@ https://api.thucchien.ai/
 AI Engineer @ FTECH AI
 📧 [hoquocthienanh@gmail.com](mailto:hoquocthienanh@gmail.com)
 🌐 GitHub: [hqta1110](https://github.com/hqta1110)
-
-```
