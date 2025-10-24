@@ -20,9 +20,11 @@ Hãy tạo kịch bản dưới dạng **JSON hợp lệ**, với cấu trúc sa
 ]
 
 Yêu cầu chi tiết:
+- **Scene 1**: phải là phần mở đầu giới thiệu bản tin. Nhân vật chính là MC trong trường quay hiện đại, nhìn thẳng ống kính, chào khán giả, giới thiệu ngắn gọn chủ đề bằng giọng trang trọng, tự tin, chuẩn Hà Nội.
+- Các cảnh còn lại (scene 2–10) có thể là MC tiếp tục dẫn hoặc hình ảnh minh họa (b-roll, infographic, hoạt cảnh...).
 - **`ssml`**: viết bằng tiếng Việt trang trọng, giọng đọc chuẩn Hà Nội, phong cách bản tin quốc gia (VTV1).
   - Thêm các thẻ `<break time="500ms"/>` để ngắt nghỉ tự nhiên.
-  - Đảm bảo mỗi đoạn kéo dài khoảng 8 giây khi đọc.
+  - Đảm bảo mỗi đoạn kéo dài 8 giây khi đọc.
 - **`visual_desc`**: mô tả rõ bối cảnh hình ảnh mà Veo 3 cần tạo (ví dụ: trường quay, toàn cảnh, cận cảnh, ánh sáng...).
 - **`transition_hint`**: hướng dẫn chuyển cảnh mượt mà (fade, zoom, lia máy, chuyển góc quay...).
 - Không sử dụng chữ viết xuất hiện trên màn hình (no on-screen text).
