@@ -75,7 +75,7 @@ def generate_full_script(topic: str, api_key: str, out_path: Path, skip_search: 
                 search_prompt,
                 api_key=api_key,
                 model="gemini-2.5-flash",
-                web_search=True,           # <── new flag you added
+                web_search=True,
                 temperature=0.0
             )
             search_file = out_path.parent / "search_context.txt"
@@ -168,20 +168,28 @@ def process_scene(scene, prev_scene, api_key, veo, out_dir: Path):
         log(f"[TTS] Done: {audio_path}")
 
         # ---- Step 2: Veo ----
-        base_prompt = open("prompts/scene_prompt.txt", encoding="utf-8").read()
-        if prev_scene:
-            prompt = base_prompt.format(
-                prev_visual=prev_scene["visual_desc"],
-                transition_hint=transition_hint,
-                main_visual=visual_desc,
-            )
-            image_ref = out_dir / "frames" / f"scene_{prev_scene['scene_id']:02d}_last.png"
+        if scene_id == 1:
+            intro_prompt = """Generate a cinematic 8-second news introduction scene
+        featuring a professional Vietnamese female anchor (around 30 years old) in a modern TV newsroom.
+        She smiles gently, looks directly at the camera, and greets the audience confidently.
+        She wears a red traditional áo dài with subtle golden patterns.
+        Lighting: warm and balanced, elegant studio atmosphere.
+        Camera: 35mm, eye level, slow push-in motion.
+        No on-screen text, only natural movement and environment."""
+            prompt = intro_prompt
+            image_ref = None
         else:
+            base_prompt = open("prompts/scene_prompt.txt", encoding="utf-8").read()
             prompt = base_prompt.format(
-                prev_visual="",
+                prev_visual=prev_scene["visual_desc"] if prev_scene else "",
                 transition_hint=transition_hint,
                 main_visual=visual_desc,
             )
+            image_ref = (
+                out_dir / "frames" / f"scene_{prev_scene['scene_id']:02d}_last.png"
+                if prev_scene else None
+            )
+
             image_ref = None
 
         log(f"[Veo] Generating video for scene {scene_id}")
